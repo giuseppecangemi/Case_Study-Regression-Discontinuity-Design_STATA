@@ -1,1 +1,1 @@
-![plot](/Users/giuseppecangemi/Desktop/_Catt/Research Method/Progetto_ researchMethod/density.jpg)
+![My Image](../Progetto_researchMethod/placebo1.jpg)
