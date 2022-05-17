@@ -3,7 +3,7 @@ In 1947, the compulsory school-leaving age in England, Scotland and Wales was ra
 
 #########
 
-OLS: To estimate more familiar and comparable returns to years of schooling, we measure education by the age at which individuals completed full-time education.
+STEP 1 - OLS: To estimate more familiar and comparable returns to years of schooling, we measure education by the age at which individuals completed full-time education.
 By developing an OLS model, I link the return rate to the years of study (the age at which the individual completed full-time education). To do this I raise the "age" variable to a power because in this way I am able to grasp the impact of the experience. The “age” variable contains in fact the age of the interviewees at the time of the survey. Clearly, if the respondents turned 18, they are likely to have acquired high skills and experience. By doing so, I somehow manage to control it. Another crucial point is to group the cohorts of people over the compulsory school age. In this way, we can differentiate the impact between the cohorts. Likewise they also group the place of birth. Both of the clusterizations just mentioned are within the cluster of variables.
 The OLS regression will be the following:
 
@@ -15,7 +15,7 @@ BIAS: These results can suffer from major biases. In fact, one of the most impor
 
 #########
 
-IV: I create a dummy variable to develop IV regression. This dummy will be equal to 1 when individuals in 1947 are 14 or younger. In doing so I analyze only the treated individuals, that is the individuals who have some effect from the established mandatory policy.
+STEP 2 - IV: I create a dummy variable to develop IV regression. This dummy will be equal to 1 when individuals in 1947 are 14 or younger. In doing so I analyze only the treated individuals, that is the individuals who have some effect from the established mandatory policy.
 
 
 <img src="https://render.githubusercontent.com/render/math?math={\color{white}\ Dummy = 1 %2c if %2c i≤14 in 1947}">
@@ -36,3 +36,12 @@ The hat over the "ageleft" means that the Y I got from the first step regression
 
 The results I obtained from IV regression are bigger than OLS: one more year of compulsory schooling leads to about 51 percent more earnings than the 16 percent of the OLS. This result is consistent with the literature since with IV regression we are going to see the effect for those subjects who have an effect from the introduction of the policy.  Instead OLS regression estimates about the average population. Although the direction is consistent with the literature, the result seems to be really great. 
 
+#########
+
+STEP 3 - RDD: In a regression discontinuity design (RDD) a discontinuity is suggestive of violations of the no manipulation assumption. In fact one could manipulate the running variable X (k on STATA in our case) in order to be on one side of the cut off rather than the other. So if we graphically see discontinuity on the cut off it means that there can be manipulation. 
+
+I develop discontinuity regressions to see if does exist the jump on the threshold. 
+
+From the results we obtain it would seem to have an effect related to the presented policy. The jump is evident.
+
+I try to do some tests (placebo) by arbitrarily changing the running variable to 5 (no longer 0). As we can see from the following graph, the discontinuity no longer exists. Thus, there is another reason for considering the discontinuity on the correct cut off to be correct and indicative.
