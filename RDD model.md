@@ -1,3 +1,4 @@
+```stata
 gen k = yobirth + 14 - 47 //normalized
 
 DCdensity k, breakpoint(0) b(1) h(2) generate(Xj Yj r0 fhat se_fhat) graphname(DCdensity_example.eps) 
@@ -71,3 +72,4 @@ test t
 //2nd stage:
 ivreg2 learn k k2-k3 (ageleft=t) [fw=wght] if abs(k)<5, cluster(clust) first
 esttab using fuzzy2st.tex, cells(b(star fmt(3)) se(par) p()) r2 ci starlevels(+ 0.10 * 0.05 ** 0.01 *** 0.001) 
+```
