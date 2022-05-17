@@ -4,4 +4,4 @@ In 1947, the compulsory school-leaving age in England, Scotland and Wales was ra
 OLS: To estimate more familiar and comparable returns to years of schooling, we measure education by the age at which individuals completed full-time education.
 
 
-![formula](https://render.githubusercontent.com/render/math?math=e^{i \pi} = -1)
+<img src="https://render.githubusercontent.com/render/math?math=e^{i \pi} = -1">
