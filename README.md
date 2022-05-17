@@ -2,6 +2,7 @@
 In 1947, the compulsory school-leaving age in England, Scotland and Wales was raised from 14 to 15 years old. Within two years after policy implementation, the proportion of individuals who left full-time education by age 14 fell to less than 10 percent. I investigate whether this government policy has had any effect on the monetary rate of return. In order to get useful information I developed different models.  First, I develop the ordinary least squares method (OLS), then the instrumental variable method (IV) and finally I show a regression discontinuity design (RDD).
 
 OLS: To estimate more familiar and comparable returns to years of schooling, we measure education by the age at which individuals completed full-time education.
+By developing an OLS model, I link the return rate to the years of study (the age at which the individual completed full-time education). To do this I raise the "age" variable to a power because in this way I am able to grasp the impact of the experience. The “age” variable contains in fact the age of the interviewees at the time of the survey. Clearly, if the respondents turned 18, they are likely to have acquired high skills and experience. By doing so, I somehow manage to control it. Another crucial point is to group the cohorts of people over the compulsory school age. In this way, we can differentiate the impact between the cohorts. Likewise they also group the place of birth. Both of the clusterizations just mentioned are within the cluster of variables.
+The OLS regression will be the following:
 
-
-<img src="https://render.githubusercontent.com/render/math?math=e^{i \pi} = -1">
+<img src="https://render.githubusercontent.com/render/math?math=ln Y =  \alpha + X_i\mu + \beta_1\ ageleft + \eta_1\ age + \eta_2\ age^2 + \epsilon">
