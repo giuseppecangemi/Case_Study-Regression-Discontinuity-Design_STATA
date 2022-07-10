@@ -1,4 +1,4 @@
-```stata
+
 gen age2 = age^2 /age squared in order to get experience level
 
 twoway (scatter learn ageleft) (lfit learn ageleft) 
@@ -26,6 +26,3 @@ esttab using TSLS.tex, cells(b(star fmt(3)) se(par) p()) r2 ci starlevels(+ 0.10
 
 ivreg2 learn (ageleft=dummy) age age2 [fw=wght], cluster(clust) first
 esttab using ivreg2.tex, cells(b(star fmt(3)) se(par) p()) r2 ci starlevels(+ 0.10 * 0.05 ** 0.01 *** 0.001) replace
-
-
-```
